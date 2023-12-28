@@ -1,8 +1,10 @@
 package creacionales.singleton;
 
 public class Conexion {
+    // creamos el atributo estatico de la misma clase
     private static Conexion instancia;
 
+    // con private evitamos que se instancie desde otras clases
     private Conexion() {
     }
 
@@ -14,6 +16,7 @@ public class Conexion {
         return instancia;
     }
 
+    // metodos de prueba
     public void conectar() {
         System.out.println("Conectando a la base de datos");
     }
