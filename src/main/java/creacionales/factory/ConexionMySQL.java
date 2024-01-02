@@ -1,15 +1,18 @@
 package creacionales.factory;
 
+import lombok.*;
+
+@Data
 public class ConexionMySQL implements IConexion{
     private String host;
     private String puerto;
     private String usuario;
     private String contrasena;
 
-    public ConexionMySQL() {
+    public ConexionMySQL(String usuario) {
         this.host = "localhost";
         this.puerto = "3306";
-        this.usuario = "root";
+        this.usuario = usuario;
         this.contrasena = "123";
     }
     @Override
