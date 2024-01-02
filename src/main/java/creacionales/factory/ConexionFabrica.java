@@ -6,7 +6,7 @@ public class ConexionFabrica {
             return new ConexionVacia();
         }
         if(motor.equalsIgnoreCase("MYSQL")){
-            return new ConexionMySQL();
+            return new ConexionMySQL("mysql");
         } else if(motor.equalsIgnoreCase("ORACLE")){
             return new ConexionOracle();
         } else if(motor.equalsIgnoreCase("POSTGRE")){
