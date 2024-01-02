@@ -1,18 +1,19 @@
-package creacionales.abstract_factory.factoryBD;
+package creacionales.abstract_factory;
+
+import creacionales.abstract_factory.factoryBD.ConexionFabricaBD;
+import creacionales.abstract_factory.factoryBD.IConexionBD;
+import creacionales.abstract_factory.factoryREST.ConexionFabricaREST;
+import creacionales.abstract_factory.factoryREST.IConexionREST;
 
 public class MainFactory {
     public static void main(String[] args) {
-        ConexionFabricaBD fabrica = new ConexionFabricaBD();
-        IConexionBD conexion1 = fabrica.getConexion("ORACLE");
-        conexion1.conectar();
-        conexion1.desconectar();
+        IFabricaAbstracta fabricaBD = new ConexionFabricaBD();
+        IConexionBD conexionBD1 = fabricaBD.getBD("MYSQL");
+        conexionBD1.conectar();
+        conexionBD1.desconectar();
 
-        IConexionBD conexion2 = fabrica.getConexion("MYSQL");
-        conexion2.conectar();
-        conexion2.desconectar();
-
-        IConexionBD conexion3 = fabrica.getConexion("POSTGRE");
-        conexion3.conectar();
-        conexion3.desconectar();
+        IFabricaAbstracta fabricaREST = new ConexionFabricaREST();
+        IConexionREST conexionREST1 = fabricaREST.getREST("COMPRAS");
+        conexionREST1.leerURL("https://www.youtube.com/watch?v=9jI-z9QN6g8");
     }
 }
