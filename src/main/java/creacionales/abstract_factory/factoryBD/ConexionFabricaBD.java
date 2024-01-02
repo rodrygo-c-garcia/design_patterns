@@ -1,7 +1,7 @@
-package creacionales.abstract_factory;
+package creacionales.abstract_factory.factoryBD;
 
 public class ConexionFabrica {
-    public IConexion getConexion(String motor){
+    public IConexionBD getConexion(String motor){
         if(motor == null){
             return new ConexionVacia();
         }

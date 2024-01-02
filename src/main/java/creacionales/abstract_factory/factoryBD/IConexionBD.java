@@ -1,4 +1,4 @@
-package creacionales.abstract_factory;
+package creacionales.abstract_factory.factoryBD;
 
 public interface IConexion {
     void conectar();
