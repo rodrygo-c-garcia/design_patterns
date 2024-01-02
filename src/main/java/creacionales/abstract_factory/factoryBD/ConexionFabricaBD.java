@@ -1,7 +1,11 @@
 package creacionales.abstract_factory.factoryBD;
 
-public class ConexionFabrica {
-    public IConexionBD getConexion(String motor){
+import creacionales.abstract_factory.IFabricaAbstracta;
+import creacionales.abstract_factory.factoryREST.IConexionREST;
+
+public class ConexionFabricaBD implements IFabricaAbstracta {
+    @Override
+    public IConexionBD getBD(String motor){
         if(motor == null){
             return new ConexionVacia();
         }
@@ -13,5 +17,10 @@ public class ConexionFabrica {
             return new ConexionPostgreSQL();
         }
         return new ConexionVacia();
+    }
+
+    @Override
+    public IConexionREST getREST(String area) {
+        return null;
     }
 }

@@ -1,6 +1,6 @@
-package creacionales.abstract_factory;
+package creacionales.abstract_factory.factoryBD;
 
-public class ConexionPostgreSQL implements IConexion {
+public class ConexionPostgreSQL implements IConexionBD {
     private String host;
     private String puerto;
     private String usuario;

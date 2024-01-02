@@ -1,6 +1,6 @@
-package creacionales.abstract_factory;
+package creacionales.abstract_factory.factoryBD;
 
-public class ConexionVacia implements IConexion {
+public class ConexionVacia implements IConexionBD {
     @Override
     public void conectar() {
         System.out.println("No se especificó proveedor");

@@ -1,9 +1,9 @@
-package creacionales.abstract_factory;
+package creacionales.abstract_factory.factoryBD;
 
 import lombok.Data;
 
 @Data
-public class ConexionMySQL implements IConexion {
+public class ConexionMySQL implements IConexionBD {
     private String host;
     private String puerto;
     private String usuario;
