@@ -1,11 +1,27 @@
 package design.dao;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MedicoImplements implements MedicoDAO{
+    private IConexion connection;
+
+    @Override
+    public void setConexion(IConexion conexion) {
+        this.connection = conexion;
+    }
+
     @Override
     public List<Medico> listar() {
+        try {
+            System.out.println("Conectado a la base de datos");
+            Thread.sleep(5000);
+            this.connection.conectar();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         List<Medico> lista = new ArrayList<>();
         Medico medico1 = new Medico();
 
