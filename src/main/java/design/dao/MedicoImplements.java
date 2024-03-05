@@ -23,9 +23,8 @@ public class MedicoImplements implements MedicoDAO{
     }
 
     @Override
-    public Medico leerPorId(int id) {
+    public void leerPorId(int id) {
         System.out.println("Medico encontrado con id: " + id);
-        return null;
     }
 
     @Override
