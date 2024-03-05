@@ -1,5 +1,9 @@
 package comportamiento.strategy;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
 public class Contexto {
     private IEstrategia estrategia;
 
