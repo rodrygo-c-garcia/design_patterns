@@ -21,9 +21,8 @@ public class PersonaDAOImplements implements PersonaDao{
     }
 
     @Override
-    public Persona leerPorId(int id) {
+    public void leerPorId(int id) {
         System.out.println("Persona encontrada con id: " + id);
-        return null;
     }
 
     @Override
