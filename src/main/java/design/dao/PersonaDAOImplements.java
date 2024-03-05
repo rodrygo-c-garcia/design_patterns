@@ -1,9 +1,18 @@
 package design.dao;
 
+import lombok.AllArgsConstructor;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class PersonaDAOImplements implements PersonaDao{
+    private IConexion connection;
+
+    @Override
+    public void setConexion(IConexion conexion) {
+        this.connection = conexion;
+    }
+
     @Override
     public List<Persona> listar() {
         List<Persona> lista = new ArrayList<>();
