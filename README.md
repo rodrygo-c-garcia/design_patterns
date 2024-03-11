@@ -1,4 +1,4 @@
-# design_patterns
+# Patrones de Diseño
 
 Este repositorio contiene ejemplos de implementación de varios patrones de diseño en Java.
 
